@@ -27,6 +27,12 @@ while True:
         exit (0)
 
     elif opcao == "1":
+        dia_transacao = datetime.strftime(datetime.now(), "%d")
+
+        if dia_atual != dia_transacao:
+            dia_atual = datetime.strftime(datetime.now(), "%d")
+            transacoes = 0
+
         cabecalho_depositar = f'''
 {"".center(COMPRIMENTO, "=")}
 {" DEPOSITAR ".center(COMPRIMENTO, "+")}
